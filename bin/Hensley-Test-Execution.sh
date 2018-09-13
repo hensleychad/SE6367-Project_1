@@ -25,37 +25,40 @@
 ### GLOBALS
 #WORKING_DIR="/home/vagrant/SE6367-Project_1"
 WORKING_DIR=$1
-SHELL_CMD="/usr/bin/spell"
-FILES_DIR="${WORKING_DIR}/input"
+SPELL_CMD="/usr/bin/spell"
+INPUT_DIR="${WORKING_DIR}/input"
+LOG_DIR="${WORKING_DIR}/log"
+OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
+ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
 
 echo "############################################"
 echo "Clean test - Test sample file against spell"
 echo "############################################"
-${SHELL_CMD} ${FILES_DIR}/sample
+${SPELL_CMD} ${INPUT_DIR}/sample
 
 
 echo "############################################"
 echo "Help test - Show help"
 echo "############################################"
-${SHELL_CMD} --help
+${SPELL_CMD} --help
 
 
 echo "############################################"
 echo "Show version -   -I, --ispell-version                     Print Ispell's version."
 echo "############################################"
-${SHELL_CMD} sample -I
+${SPELL_CMD} sample -I
 
 echo "############################################"
 echo "Destructive test - File empty"
 echo "############################################"
-${SHELL_CMD} ${FILES_DIR}/empty_sample
+${SPELL_CMD} ${INPUT_DIR}/empty_sample
 
 echo "############################################"
 echo "Destructive test - File does not exist"
 echo "############################################"
-${SHELL_CMD} ${FILES_DIR}/sample_none
+${SPELL_CMD} ${INPUT_DIR}/sample_none
 
 echo "############################################"
 #echo "Destructive test - No file"
 echo "############################################"
-#${SHELL_CMD}
+#${SPELL_CMD}
