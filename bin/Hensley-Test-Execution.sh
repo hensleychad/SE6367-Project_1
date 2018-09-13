@@ -23,9 +23,10 @@
 
 
 ### GLOBALS
-WORKING_DIR="/home/vagrant/SE6367-Project_1"
+#WORKING_DIR="/home/vagrant/SE6367-Project_1"
+WORKING_DIR=$1
 SHELL_CMD="/usr/bin/spell"
-FILES_DIR="${WORKING_DIR}/files"
+FILES_DIR="${WORKING_DIR}/input"
 
 echo "############################################"
 echo "Clean test - Test sample file against spell"
