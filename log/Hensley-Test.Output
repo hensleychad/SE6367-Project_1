@@ -1,7 +1,10 @@
-############################################
-Clean test - Test sample file against spell
-############################################
-Tihs
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - ###### Start input file testing #####
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - Clean test - Test sample file against spell
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - Executing /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample
+[Thu Oct  4 16:53:54 EDT 2018] - Tihs
 si
 fo
 Splel
@@ -14,19 +17,23 @@ fiel
 Foo
 bza
 baz
-############################################
-Help test - Show help
-############################################
-Usage: /usr/bin/spell [OPTION]... [FILE]...
-############################################
-Show version -   -I, --ispell-version                     Print Ispell's version.
-############################################
-/usr/bin/spell: Ispell version 3.3.02
-############################################
-Destructive test - File empty
-############################################
-############################################
-Destructive test - File does not exist
-############################################
-############################################
-############################################
+[Thu Oct  4 16:53:54 EDT 2018] - ###### End input file testing #####
+
+
+
+
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - ###### Start Show help test case #####
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - Help test - Show help
+[Thu Oct  4 16:53:54 EDT 2018] -    -h, --help                          Print a summary of the options.
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - Usage: /usr/bin/spell [OPTION]... [FILE]...
+[Thu Oct  4 16:53:54 EDT 2018] - ###### End Show help test case #####
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - ###### Start print ispell version #####
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] -    -I, --ispell-version                        Print Ispell's version.
+[Thu Oct  4 16:53:54 EDT 2018] - ############################################
+[Thu Oct  4 16:53:54 EDT 2018] - /usr/bin/spell: Ispell version 3.3.02
+[Thu Oct  4 16:53:54 EDT 2018] - ###### End print ispell version #####
