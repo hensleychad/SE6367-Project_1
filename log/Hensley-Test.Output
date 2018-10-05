@@ -1,8 +1,8 @@
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T001 test_number_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T001 test_number_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_numbers 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 Tihs
 si
 fo
@@ -16,34 +16,34 @@ fiel
 Foo
 bza
 baz
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T001 test_number_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T001 test_number_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T002 test_multi_line_space_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T002 test_multi_line_space_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_ft 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 EOL
 donâ
 fileâ
 binnary
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T002 test_multi_line_space_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T002 test_multi_line_space_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T003 test_column_format_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T003 test_column_format_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/iso_sample 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 DIAERESIS
 AA
 AB
@@ -88,18 +88,18 @@ DIAERESIS
 FD
 FF
 DIAERESIS
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T003 test_column_format_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T003 test_column_format_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T004 test_stock_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T004 test_stock_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 Tihs
 si
 fo
@@ -113,60 +113,60 @@ fiel
 Foo
 bza
 baz
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T004 test_stock_sample --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T004 test_stock_sample --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T005 test_help --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T005 test_help --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell --help 2>> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - NOTE: test_help echos the the usage of spell STDOUT then writes the help menu to STDERR. See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_help output
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - NOTE: test_help echos the the usage of spell STDOUT then writes the help menu to STDERR. See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_help output
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 Usage: /usr/bin/spell [OPTION]... [FILE]...
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T005 test_help --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T005 test_help --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T006 test_ispell_version --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T006 test_ispell_version --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell -I 2>> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 /usr/bin/spell: Ispell version 3.3.02
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T006 test_ispell_version --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T006 test_ispell_version --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T007 test_spell_version  --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T007 test_spell_version  --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell --version 2>>/home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - NOTE: test_spell_version output will be empty. See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_spell_version output
-[Fri Oct  5 13:16:03 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - NOTE: test_spell_version output will be empty. See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_spell_version output
+[Fri Oct  5 14:04:25 EDT 2018] - Output:
 
-[Fri Oct  5 13:16:03 EDT 2018] - -- End T007 test_spell_version --
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] 
+[Fri Oct  5 14:04:25 EDT 2018] - -- End T007 test_spell_version --
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:03 EDT 2018] - ############################################
-[Fri Oct  5 13:16:03 EDT 2018] - -- Start T008 test_other_dictionary --
-[Fri Oct  5 13:16:03 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:25 EDT 2018] - ############################################
+[Fri Oct  5 14:04:25 EDT 2018] - -- Start T008 test_other_dictionary --
+[Fri Oct  5 14:04:25 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/iso_sample --dictionary=/home/vagrant/SE6367-Project_1/dictionary/british-english 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:03 EDT 2018] - NOTE: test_other_dictionary output will show usage  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_other_dictionary output
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:25 EDT 2018] - NOTE: test_other_dictionary output will show usage  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_other_dictionary output
+[Fri Oct  5 14:04:30 EDT 2018] - Output:
 DIAERESIS
 AA
 AB
@@ -211,32 +211,32 @@ DIAERESIS
 FD
 FF
 DIAERESIS
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T008 test_other_dictionary --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:30 EDT 2018] - -- End T008 test_other_dictionary --
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T009 test_ispell_program --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] - -- Start T009 test_ispell_program --
+[Fri Oct  5 14:04:30 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample --ispell 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - NOTE: test_ispell_program will error since ispell may not be installed  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_ispell_program output
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:30 EDT 2018] - NOTE: test_ispell_program will error since ispell may not be installed  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_ispell_program output
+[Fri Oct  5 14:04:30 EDT 2018] - Output:
 Try `/usr/bin/spell --help' for more information.
-[Fri Oct  5 13:16:08 EDT 2018] - -- End  T009 test_ispell_program --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:30 EDT 2018] - -- End  T009 test_ispell_program --
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T010 test_all_chains  --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] - -- Start T010 test_all_chains  --
+[Fri Oct  5 14:04:30 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_numbers -l 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:30 EDT 2018] - Output:
 Tihs
 si
 fo
@@ -250,75 +250,50 @@ fiel
 Foo
 bza
 baz
-[Fri Oct  5 13:16:08 EDT 2018] - -- End  T010 test_all_chains --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:30 EDT 2018] - -- End  T010 test_all_chains --
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T011 test_print_file_name --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] - -- Start T011 test_print_file_name --
+[Fri Oct  5 14:04:30 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_ft --print-file-name 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:30 EDT 2018] - Output:
 /home/vagrant/SE6367-Project_1/input/sample_ft: EOL
 /home/vagrant/SE6367-Project_1/input/sample_ft: donâ
 /home/vagrant/SE6367-Project_1/input/sample_ft: fileâ
 /home/vagrant/SE6367-Project_1/input/sample_ft: binnary
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T011 test_print_file_name --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:30 EDT 2018] - -- End T011 test_print_file_name --
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T012 test_print_numbers_on_lines --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] - -- Start T012 test_print_numbers_on_lines --
+[Fri Oct  5 14:04:30 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_ft --number 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:30 EDT 2018] - Output:
 9: EOL
 11: donâ
 13: fileâ
 13: binnary
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T012 test_print_numbers_on_lines --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:30 EDT 2018] - -- End T012 test_print_numbers_on_lines --
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T014 test_print_words_not_literally_found --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
-/usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_numbers -v 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
-Tihs
-si
-fo
-Splel
-worsd
-spellledworng
-fi
-cna
-dael
-fiel
-Foo
-bza
-baz
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T014 test_print_words_not_literally_found --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
-++
-++
-++
-++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T013 test_verbose --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:30 EDT 2018] - ############################################
+[Fri Oct  5 14:04:30 EDT 2018] - -- Start T013 test_verbose --
+[Fri Oct  5 14:04:30 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/iso_sample -v 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:31 EDT 2018] - Output:
 DIAERESIS
 AA
 AB
@@ -363,51 +338,51 @@ DIAERESIS
 FD
 FF
 DIAERESIS
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T013 test_verbose --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:31 EDT 2018] - -- End T013 test_verbose --
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] 
 ++
 ++
 ++
 ++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T017 test_empty_file --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
-/usr/bin/spell /home/vagrant/SE6367-Project_1/input/empty_sample 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - NOTE: test_empty_file test output will show nothing.
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
-
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T017 test_empty_file --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
-++
-++
-++
-++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T016 test_file_not_found --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
-/usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_none 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - NOTE: test_file_not_found output will show nothing.  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_file_not_found output
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
-
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T016 test_file_not_found --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
-++
-++
-++
-++
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] - -- Start T015 test_unsupported_flag --
-[Fri Oct  5 13:16:08 EDT 2018] - Exeucting the following command: 
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] - -- Start T014 test_unsupported_flag --
+[Fri Oct  5 14:04:31 EDT 2018] - Exeucting the following command: 
 /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample -q 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
-[Fri Oct  5 13:16:08 EDT 2018] - NOTE: test_unsupported_flag output will show usage  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_unsupported_flag output
-[Fri Oct  5 13:16:08 EDT 2018] - Output:
+[Fri Oct  5 14:04:31 EDT 2018] - NOTE: test_unsupported_flag output will show usage  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_unsupported_flag output
+[Fri Oct  5 14:04:31 EDT 2018] - Output:
 Try `/usr/bin/spell --help' for more information.
-[Fri Oct  5 13:16:08 EDT 2018] - -- End T015 test_unsupported_flag --
-[Fri Oct  5 13:16:08 EDT 2018] - ############################################
-[Fri Oct  5 13:16:08 EDT 2018] 
+[Fri Oct  5 14:04:31 EDT 2018] - -- End T014 test_unsupported_flag --
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] - -- Start T015 test_file_not_found --
+[Fri Oct  5 14:04:31 EDT 2018] - Exeucting the following command: 
+/usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_none 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
+[Fri Oct  5 14:04:31 EDT 2018] - NOTE: test_file_not_found output will show nothing.  See /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error for test_file_not_found output
+[Fri Oct  5 14:04:31 EDT 2018] - Output:
+
+[Fri Oct  5 14:04:31 EDT 2018] - -- End T017 test_file_not_found --
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] - -- Start T016 test_empty_file --
+[Fri Oct  5 14:04:31 EDT 2018] - Exeucting the following command: 
+/usr/bin/spell /home/vagrant/SE6367-Project_1/input/empty_sample 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error.tmp
+[Fri Oct  5 14:04:31 EDT 2018] - NOTE: test_empty_file test output will show nothing.
+[Fri Oct  5 14:04:31 EDT 2018] - Output:
+
+[Fri Oct  5 14:04:31 EDT 2018] - -- End T016 test_empty_file --
+[Fri Oct  5 14:04:31 EDT 2018] - ############################################
+[Fri Oct  5 14:04:31 EDT 2018] 
 ++
 ++
 ++

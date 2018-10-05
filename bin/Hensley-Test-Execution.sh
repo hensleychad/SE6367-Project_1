@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 
 ### GLOBALS
@@ -11,7 +11,7 @@ LOG_DIR="${WORKING_DIR}/log"
 OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
 ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
 ERROR_FILE_TMP="${LOG_DIR}/Hensley-Test.Error.tmp"
-TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_sample test_stock_sample test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_verbose test_empty_file  test_file_not_found test_unsupported_flag)
+TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_sample test_stock_sample test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_verbose test_unsupported_flag test_file_not_found test_empty_file  )
 
 ###############  START Pre-Flight checks  ###################3
   check_input_dir_exist() {
@@ -323,32 +323,19 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     add_buffer
   }
 
-  test_print_words_not_literally_found() {
-    cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}"
-    log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start T014 test_print_words_not_literally_found --" ${OUTPUT_FILE}
-    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}`
-    log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End T014 test_print_words_not_literally_found --" ${OUTPUT_FILE}
-    log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "T014 test_print_words_not_literally_found"
-    add_buffer
-  }
 
   test_unsupported_flag() {
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start T015 test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "-- Start T014 test_unsupported_flag --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_unsupported_flag output will show usage  See ${ERROR_FILE} for test_unsupported_flag output" ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End T015 test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "-- End T014 test_unsupported_flag --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "T015 test_unsupported_flag"
+    merge_error_file "T014 test_unsupported_flag"
     add_buffer
   }
 
@@ -356,14 +343,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start T016 test_file_not_found --" ${OUTPUT_FILE}
+    log_it "-- Start T015 test_file_not_found --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_file_not_found output will show nothing.  See ${ERROR_FILE} for test_file_not_found output" ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End T016 test_file_not_found --" ${OUTPUT_FILE}
+    log_it "-- End T017 test_file_not_found --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "T016 test_file_not_found"
+    merge_error_file "T015 test_file_not_found"
     add_buffer
   }
 
@@ -371,14 +358,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start T017 test_empty_file --" ${OUTPUT_FILE}
+    log_it "-- Start T016 test_empty_file --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_empty_file test output will show nothing." ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End T017 test_empty_file --" ${OUTPUT_FILE}
+    log_it "-- End T016 test_empty_file --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "T017 test_empty_file"
+    merge_error_file "T016 test_empty_file"
     add_buffer
   }
 
