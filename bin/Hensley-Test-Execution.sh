@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 
 ### GLOBALS
@@ -11,7 +11,7 @@ LOG_DIR="${WORKING_DIR}/log"
 OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
 ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
 ERROR_FILE_TMP="${LOG_DIR}/Hensley-Test.Error.tmp"
-TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_sample test_stock_sample test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_print_stems test_empty_file  test_file_not_found test_unsupported_flag)
+TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_sample test_stock_sample test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_verbose test_empty_file  test_file_not_found test_unsupported_flag)
 
 ###############  START Pre-Flight checks  ###################3
   check_input_dir_exist() {
@@ -309,17 +309,17 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     add_buffer
   }
 
-  test_print_stems() {
+  test_verbose() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample -v 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start T013 test_print_stems --" ${OUTPUT_FILE}
+    log_it "-- Start T013 test_verbose --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample -v 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End T013 test_print_stems --" ${OUTPUT_FILE}
+    log_it "-- End T013 test_verbose --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "T013 test_print_stems"
+    merge_error_file "T013 test_verbose"
     add_buffer
   }
 
