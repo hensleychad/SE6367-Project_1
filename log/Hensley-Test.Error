@@ -1,1 +1,91 @@
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - -- Start Error ouput for test_standard -- 
+[Fri Oct  5 11:15:10 EDT 2018] - -- End Error ouput for test_standard -- 
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - -- Start Error ouput for test_help -- 
+This is GNU Spell, a Unix spell emulator.
+
+  -I, --ispell-version			Print Ispell's version.
+  -V, --version				Print the version number.
+  -b, --british				Use the British dictionary.
+  -d, --dictionary=FILE			Use FILE to look up words.
+  -h, --help				Print a summary of the options.
+  -i, --ispell=PROGRAM			Calls PROGRAM as Ispell.
+  -l, --all-chains			Ignored; for compatibility.
+  -n, --number				Print line numbers before lines.
+  -o, --print-file-name			Print file names before lines.
+  -D, --ispell-dictionary=DICTIONARY	Use DICTIONARY to look up words.
+  -s, --stop-list=FILE			Ignored; for compatibility.
+  -v, --verbose				Print words not literally found.
+  -x, --print-stems			Ignored; for compatibility.
+
+Please use Info to read more (type `info spell').
+[Fri Oct  5 11:15:10 EDT 2018] - -- End Error ouput for test_help -- 
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - -- Start Error ouput for test_ispell_version -- 
+[Fri Oct  5 11:15:10 EDT 2018] - -- End Error ouput for test_ispell_version -- 
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:10 EDT 2018] - -- Start Error ouput for test_spell_version -- 
+/usr/bin/spell: version 1.0
+[Fri Oct  5 11:15:10 EDT 2018] - -- End Error ouput for test_spell_version -- 
+[Fri Oct  5 11:15:10 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_other_dictionary -- 
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Asunci√≥n' contains illegal character
+/usr/bin/spell: unrecognized Ispell line `@(#) International Ispell Version 3.3.02 12 Jun 2005
+'
+/usr/bin/ispell: 
+ fro, ft, go, ho, Io, Jo, lo, Mo, no, o, of, Po, so, to, yo
+	
+/usr/bin/ispell: Word 'Asunci√≥n's' contains illegal character
+/usr/bin/ispell: 
+‰n∑¯á‘ 43: Boo, Coo, Flo, Fob, Foe, Fog, Food, Fool, Foot, FopH
+/usr/bin/ispell: Word 'Atat√ºrk' contains illegal character
+/usr/bin/ispell: 
+
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_other_dictionary -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_ispell_program -- 
+/usr/bin/spell: option '--ispell' requires an argument
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_ispell_program -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_all_chains -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_all_chains -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_print_file_name -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_print_file_name -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_print_numbers_on_lines -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_print_numbers_on_lines -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_print_words_not_literally_found -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_print_words_not_literally_found -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_print_stems -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_print_stems -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_empty_file -- 
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_empty_file -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_file_not_found -- 
+/usr/bin/spell: /home/vagrant/SE6367-Project_1/input/sample_none: stat error: No such file or directory
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_file_not_found -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################
+[Fri Oct  5 11:15:12 EDT 2018] - -- Start Error ouput for test_unsupported_flag -- 
 /usr/bin/spell: invalid option -- 'q'
+[Fri Oct  5 11:15:12 EDT 2018] - -- End Error ouput for test_unsupported_flag -- 
+[Fri Oct  5 11:15:12 EDT 2018] - ############################################

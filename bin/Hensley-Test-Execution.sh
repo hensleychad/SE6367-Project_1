@@ -10,18 +10,10 @@ DICT_DIR="${WORKING_DIR}/dictionary"
 LOG_DIR="${WORKING_DIR}/log"
 OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
 ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
-#TEST_ARRAY=(test_standard test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_+print_words_not_literally_found test_print_stems test_empty_file  test_file_not_found test_unsupported_flag)
-TEST_ARRAY=(test_unsupported_flag)
-ERROR_MSG="Check Error Log, ${ERROR_FILE}"
+ERROR_FILE_TMP="${LOG_DIR}/Hensley-Test.Error.tmp"
+TEST_ARRAY=(test_standard test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_print_stems test_empty_file  test_file_not_found test_unsupported_flag)
 
 ###############  START Pre-Flight checks  ###################3
-  touch_error_file() {
-   if [ ! -e ${ERROR_FILE} ]; then
-    touch ${ERROR_FILE}
-    echo "Creating error log, if not you miss first timestamp in error file"
-   fi
-  }
-
   check_input_dir_exist() {
    if [ ! -d ${INPUT_DIR} ]; then
     echo "${INPUT_DIR}: not found"
@@ -78,11 +70,12 @@ ERROR_MSG="Check Error Log, ${ERROR_FILE}"
   }
 
   log_it() {
-    echo -e "[`date`] - ${*}" >> ${OUTPUT_FILE}
+    #echo -e "[`date`] - ${*}" >> ${OUTPUT_FILE}
+    echo -e "[`date`] - ${1}" >> $2
   }
 
   mark_it() {
-    echo -e "[`date`] - ${*}" >> ${ERROR_FILE}
+    echo -e "[`date`] - ${1}" >> $2
   }
 
   clean_logs() {
@@ -97,10 +90,23 @@ ERROR_MSG="Check Error Log, ${ERROR_FILE}"
      echo "Cleaning up error file ${ERROR_FILE}"
      rm ${ERROR_FILE}
    fi
+
+   if [ -f $ERROR_FILE_TMP ]; then
+     echo "Cleaning up error file ${ERROR_FILE_TMP}"
+     rm ${ERROR_FILE_TMP}
+   fi
   }
 
   add_buffer() {
     echo -e "[`date`] \n++\n++\n++\n++" >> ${OUTPUT_FILE}
+  }
+
+  merge_error_file() {
+    log_it "############################################" ${ERROR_FILE}
+    log_it "-- Start Error ouput for ${*} -- " ${ERROR_FILE} 
+    cat ${ERROR_FILE_TMP} >> ${ERROR_FILE}
+    log_it "-- End Error ouput for ${*} -- " ${ERROR_FILE} 
+    log_it "############################################" ${ERROR_FILE}
   }
 
   pre_flight_check() {
@@ -111,7 +117,6 @@ ERROR_MSG="Check Error Log, ${ERROR_FILE}"
     check_log_dir_exist
     clean_logs
     clean_error_logs
-    touch_error_file
   }
 
   run_tests() {
@@ -120,7 +125,7 @@ ERROR_MSG="Check Error Log, ${ERROR_FILE}"
     echo "Errors can be found in ${ERROR_FILE}"
     for test_method in "${TEST_ARRAY[@]}"
     do
-      log_it "Running ${test_method}"
+      #log_it "-- Running ${test_method}"
       ${test_method}
     done
   }
@@ -130,193 +135,204 @@ ERROR_MSG="Check Error Log, ${ERROR_FILE}"
 ###############  START  Tests  ###################3
   test_standard() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start input file testing #####"
-    log_it "Clean test - Test sample file against spell"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End input file testing #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_standard --" ${OUTPUT_FILE}
+    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_standard --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_standard"
     add_buffer
   }
 
   test_help() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} --help 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start Show help test case #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} --help 2> ${ERROR_FILE}`
-    log_it "NOTE: test_help echos the the usage of spell STDOUT then writes the help menu to STDERR. See ${ERROR_FILE} for test_help output"
-    log_it "Output:\n$cmd"
-    log_it "-- End Show help test case #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} --help 2>> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_help --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} --help 2>${ERROR_FILE_TMP}`
+    log_it "NOTE: test_help echos the the usage of spell STDOUT then writes the help menu to STDERR. See ${ERROR_FILE} for test_help output" ${OUTPUT_FILE}
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_help --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_help"
     add_buffer
   }
 
   test_ispell_version() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} -I 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print ispell version #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} -I 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print ispell version #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} -I 2>> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_ispell_version --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} -I 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_ispell_version --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_ispell_version"
     add_buffer
   }
 
   test_spell_version () {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} --version 2>${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print version number  #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    log_it "NOTE: test_spell_version echos to both STDERR and STDOUT. See ${ERROR_FILE} for test_spell_version output"
-    cmd=`${SPELL_CMD} --version 2>${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print version number #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} --version 2>>${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_spell_version  --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    log_it "NOTE: test_spell_version output will be empty. See ${ERROR_FILE} for test_spell_version output" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} --version 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_spell_version --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_spell_version"
     add_buffer
   }
 
   test_other_dictionary() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE}"
-    log_it "############################################"
-    mark_it "Start ERROR from $cmd_string"
-    log_it "-- Start  use other file to look up words #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    log_it "NOTE: The --dictionary/-d flag echos to both STDERR and STDOUT. See ${ERROR_FILE} for test_other_dictionary output"
-    log_it "NOTE: test_other_dictionary output will show usage  See ${ERROR_FILE} for test_unsupported_flag output"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE}`
-    mark_it "End ERROR from $cmd_string"
-    log_it "Output:\n$cmd"
-    log_it "-- End  use other file to look up words #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_other_dictionary --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    log_it "NOTE: test_other_dictionary output will show usage  See ${ERROR_FILE} for test_unsupported_flag output" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_other_dictionary --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_other_dictionary"
     add_buffer
   }
 
   test_ispell_program() {
     cmd=""  #keep variable clean
-    log_it "############################################"
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE}"
-    log_it "-- Start  Calls PROGRAM as Ispell #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End  Calls PROGRAM as Ispell #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_ispell_program --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End  test_ispell_program --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_ispell_program"
     add_buffer
   }
 
   test_all_chains() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start caompatibility  #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End  caompatibility #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_all_chains  --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End  test_all_chains --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_all_chains"
     add_buffer
   }
 
   test_print_file_name() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print-file-name #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print-file-name #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_print_file_name --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_print_file_name --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_print_file_name"
     add_buffer
   }
 
   test_print_numbers_on_lines() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print numbers before lines #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print numbers before lines #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_print_numbers_on_lines --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_print_numbers_on_lines --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_print_numbers_on_lines"
     add_buffer
   }
 
   test_print_stems() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print-stems #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print-stems #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_print_stems --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_print_stems --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_print_stems"
     add_buffer
   }
 
   test_print_words_not_literally_found() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start print words not literally found #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE}`
-    log_it "Output:\n$cmd"
-    log_it "-- End print words not literally found #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_print_words_not_literally_found --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_print_words_not_literally_found --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_print_words_not_literally_found"
     add_buffer
   }
 
   test_unsupported_flag() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start test of unsupported flag #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE}`
-    log_it "NOTE: test_unsupported_flag output will show usage  See ${ERROR_FILE} for test_unsupported_flag output"
-    log_it "Output:\n$cmd"
-    log_it "-- End test of unsupported flag #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}`
+    log_it "NOTE: test_unsupported_flag output will show usage  See ${ERROR_FILE} for test_unsupported_flag output" ${OUTPUT_FILE}
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_unsupported_flag"
     add_buffer
   }
 
   test_file_not_found() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start does not exist #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE}`
-    log_it "NOTE: test_file_not_found output will show nothing.  See ${ERROR_FILE} for test_file_not_found output"
-    log_it "Output:\n$cmd"
-    log_it "-- End does not exist #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_file_not_found --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}`
+    log_it "NOTE: test_file_not_found output will show nothing.  See ${ERROR_FILE} for test_file_not_found output" ${OUTPUT_FILE}
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_file_not_found --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_file_not_found"
     add_buffer
   }
 
   test_empty_file() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE}"
-    log_it "############################################"
-    log_it "-- Start empty file test #####"
-    log_it "Exeucting the following command: \n${cmd_string}"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE}`
-    log_it "NOTE: test_empty_file test output will show nothing.  See ${ERROR_FILE} for test_empty_file output" 
-    log_it "Output:\n$cmd"
-    log_it "-- End empty file test #####"
-    log_it "############################################"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_empty_file --" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}`
+    log_it "NOTE: test_empty_file test output will show nothing." ${OUTPUT_FILE}
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_empty_file --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_empty_file"
     add_buffer
   }
 
