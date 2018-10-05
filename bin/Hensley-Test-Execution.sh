@@ -90,6 +90,9 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
      echo "Cleaning up error file ${ERROR_FILE}"
      rm ${ERROR_FILE}
    fi
+  }
+
+  clean_tmp_error_logs() {
 
    if [ -f $ERROR_FILE_TMP ]; then
      echo "Cleaning up error file ${ERROR_FILE_TMP}"
@@ -117,6 +120,7 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     check_log_dir_exist
     clean_logs
     clean_error_logs
+    clean_tmp_error_logs
   }
 
   run_tests() {
@@ -128,6 +132,7 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
       #log_it "-- Running ${test_method}"
       ${test_method}
     done
+    clean_tmp_error_logs
   }
 
 ###############  END  Utils  ###################3
@@ -238,12 +243,12 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_other_dictionary() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_other_dictionary --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    log_it "NOTE: test_other_dictionary output will show usage  See ${ERROR_FILE} for test_unsupported_flag output" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}`
+    log_it "NOTE: test_other_dictionary output will show usage  See ${ERROR_FILE} for test_other_dictionary output" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End test_other_dictionary --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
@@ -257,6 +262,7 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_ispell_program --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    log_it "NOTE: test_ispell_program will error since ispell may not be installed  See ${ERROR_FILE} for test_ispell_program output" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End  test_ispell_program --" ${OUTPUT_FILE}
@@ -267,11 +273,11 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_all_chains() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers -l 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_all_chains  --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers -l 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End  test_all_chains --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
@@ -281,11 +287,11 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_print_file_name() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft --print-file-name 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_print_file_name --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft --print-file-name 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End test_print_file_name --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
@@ -295,11 +301,11 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_print_numbers_on_lines() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft --number 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_print_numbers_on_lines --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft --number 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End test_print_numbers_on_lines --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
@@ -309,11 +315,11 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_print_stems() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_print_stems --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End test_print_stems --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
@@ -323,11 +329,11 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
 
   test_print_words_not_literally_found() {
     cmd=""  #keep variable clean
-    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE_TMP}"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
     log_it "-- Start test_print_words_not_literally_found --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE_TMP}`
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
     log_it "-- End test_print_words_not_literally_found --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}

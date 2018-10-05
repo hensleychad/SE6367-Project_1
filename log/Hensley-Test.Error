@@ -1,21 +1,21 @@
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_number_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_number_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_multi_line_space_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_multi_line_space_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_multi_line_space_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_multi_line_space_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_stock_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_stock_sample -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_help -- 
+[Fri Oct  5 11:57:23 EDT 2018] - ############################################
+[Fri Oct  5 11:57:23 EDT 2018] - -- Start Error ouput for test_number_sample -- 
+[Fri Oct  5 11:57:23 EDT 2018] - -- End Error ouput for test_number_sample -- 
+[Fri Oct  5 11:57:23 EDT 2018] - ############################################
+[Fri Oct  5 11:57:23 EDT 2018] - ############################################
+[Fri Oct  5 11:57:23 EDT 2018] - -- Start Error ouput for test_multi_line_space_sample -- 
+[Fri Oct  5 11:57:23 EDT 2018] - -- End Error ouput for test_multi_line_space_sample -- 
+[Fri Oct  5 11:57:23 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - -- Start Error ouput for test_multi_line_space_sample -- 
+[Fri Oct  5 11:57:24 EDT 2018] - -- End Error ouput for test_multi_line_space_sample -- 
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - -- Start Error ouput for test_stock_sample -- 
+[Fri Oct  5 11:57:24 EDT 2018] - -- End Error ouput for test_stock_sample -- 
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - -- Start Error ouput for test_help -- 
 This is GNU Spell, a Unix spell emulator.
 
   -I, --ispell-version			Print Ispell's version.
@@ -33,71 +33,377 @@ This is GNU Spell, a Unix spell emulator.
   -x, --print-stems			Ignored; for compatibility.
 
 Please use Info to read more (type `info spell').
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_help -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_ispell_version -- 
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_ispell_version -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:08 EDT 2018] - -- Start Error ouput for test_spell_version -- 
+[Fri Oct  5 11:57:24 EDT 2018] - -- End Error ouput for test_help -- 
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - -- Start Error ouput for test_ispell_version -- 
+[Fri Oct  5 11:57:24 EDT 2018] - -- End Error ouput for test_ispell_version -- 
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:24 EDT 2018] - -- Start Error ouput for test_spell_version -- 
 /usr/bin/spell: version 1.0
-[Fri Oct  5 11:47:08 EDT 2018] - -- End Error ouput for test_spell_version -- 
-[Fri Oct  5 11:47:08 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_other_dictionary -- 
+[Fri Oct  5 11:57:24 EDT 2018] - -- End Error ouput for test_spell_version -- 
+[Fri Oct  5 11:57:24 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_other_dictionary -- 
 /usr/bin/ispell: 
 
 /usr/bin/ispell: Word 'Asunción' contains illegal character
 /usr/bin/spell: unrecognized Ispell line `@(#) International Ispell Version 3.3.02 12 Jun 2005
 '
 /usr/bin/ispell: 
- fro, ft, go, ho, Io, Jo, lo, Mo, no, o, of, Po, so, to, yo
-	
+
 /usr/bin/ispell: Word 'Asunción's' contains illegal character
 /usr/bin/ispell: 
-�t��,	 43: Boo, Coo, Flo, Fob, Foe, Fog, Food, Fool, Foot, FopH
+
 /usr/bin/ispell: Word 'Atatürk' contains illegal character
 /usr/bin/ispell: 
 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_other_dictionary -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_ispell_program -- 
+/usr/bin/ispell: Word 'Atatürk's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Bartók' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Bogotá' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Bogotá's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Boötes' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Boötes's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Buñuel' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Buñuel's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Concepción' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Dvorák' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Dürer' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Düsseldorf' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Düsseldorf's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Elysée' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Elysée's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Esterházy' contains illegal character
+/usr/bin/ispell: 
+R, ARA, AS, AT, AU, AV, AVA, AX, AY, BA, BAA, CA, DA, FA, GA, HA, L9�
+/usr/bin/ispell: Word 'Esterházy's' contains illegal character
+/usr/bin/ispell: 
+AV, AX, AY, B, BA, CAB, DAB, DB, GAB, GB, JAB, KB, LAB, LB, MB, NAB��
+/usr/bin/ispell: Word 'Fabergé' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Furtwängler' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Furtwängler's' contains illegal character
+/usr/bin/ispell: 
+ATE, AU, AV, AVE, AWE, AX, AXE, AY, AYE, BE, E, FE, GE, HE, LE, MAE��
+/usr/bin/ispell: Word 'Gewürztraminer' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Gruyère' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Gruyère's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Grünewald' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Grünewald's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Gödel' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Gödel's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Göteborg' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Göteborg's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Héloise' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Héloise's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Köln' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Köln's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Lumière' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Lumière's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Mallarmé' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Münchhausen' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Münchhausen's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Paraná' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Paraná's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Poincaré' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Poincaré's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pokémon' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pokémon's' contains illegal character
+/usr/bin/ispell: 
+R, ARE, AS, AT, ATE, AU, AV, AVE, AWE, AX, AXE, AY, AYE, BE, E, FE,��
+/usr/bin/ispell: Word 'Provençal' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Provençal's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pétain' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pétain's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pôrto' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Pôrto's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Québecois' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Ragnarök' contains illegal character
+/usr/bin/ispell: 
+ CUE, E, FE, GE, HE, ICE, LE, ME, NE, RE, SE, WE, XE, YE
+
+/usr/bin/ispell: Word 'Ragnarök's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Schrödinger' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Schrödinger's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Sèvres' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Tannhäuser' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Tannhäuser's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Thessaloníki' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Thessaloníki's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Valéry' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Velásquez' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Velásquez's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Velázquez' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Zürich' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'Zürich's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'abbé' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'abbé's' contains illegal character
+/usr/bin/ispell: 
+, DOE, DR, DUE, DYE, E, ED, FE, GE, HE, LE, ME, NE, ODE, RE, SE, WE��
+/usr/bin/ispell: Word 'abbés' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'adiós' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'appliqué' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'appliqué's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'appliquéd' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'appliquéing' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'appliqués' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'attaché' contains illegal character
+/usr/bin/ispell: 
+R, ARE, AS, AT, ATE, AU, AV, AVE, AWE, AX, AXE, AY, AYE, BE, E, FE,��
+/usr/bin/ispell: Word 'attaché's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'attachés' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'blasé' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'boutonnière' contains illegal character
+/usr/bin/ispell: 
+, ES, ET, ETA, EU, EVA, EX, FA, GA, HA, LA, LEA, MA, NA, PA, PEA, Q��
+/usr/bin/ispell: Word 'boutonnière's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'boutonnières' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'café' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'café's' contains illegal character
+/usr/bin/ispell: 
+ET, EU, EVE, EWE, EX, EYE, FE, FEE, GE, GEE, HE, LE, LEE, ME, NE, N1�
+/usr/bin/ispell: Word 'cafés' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'canapé' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'canapé's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'canapés' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'château' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'château's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'châteaux' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'châtelaine' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'châtelaine's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'châtelaines' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'cliché' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'cliché's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'clichéd' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'clichés' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'clientèle' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'clientèle's' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'clientèles' contains illegal character
+/usr/bin/ispell: 
+
+/usr/bin/ispell: Word 'confrère' contains illegal character
+/usr/bin/ispell: 
+
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_other_dictionary -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_ispell_program -- 
 /usr/bin/spell: option '--ispell' requires an argument
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_ispell_program -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_all_chains -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_all_chains -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_print_file_name -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_print_file_name -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_print_numbers_on_lines -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_print_numbers_on_lines -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_print_words_not_literally_found -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_print_words_not_literally_found -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_print_stems -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_print_stems -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_empty_file -- 
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_empty_file -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_file_not_found -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_ispell_program -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_all_chains -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_all_chains -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_print_file_name -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_print_file_name -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_print_numbers_on_lines -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_print_numbers_on_lines -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_print_words_not_literally_found -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_print_words_not_literally_found -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_print_stems -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_print_stems -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_empty_file -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_empty_file -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_file_not_found -- 
 /usr/bin/spell: /home/vagrant/SE6367-Project_1/input/sample_none: stat error: No such file or directory
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_file_not_found -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
-[Fri Oct  5 11:47:10 EDT 2018] - -- Start Error ouput for test_unsupported_flag -- 
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_file_not_found -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- Start Error ouput for test_unsupported_flag -- 
 /usr/bin/spell: invalid option -- 'q'
-[Fri Oct  5 11:47:10 EDT 2018] - -- End Error ouput for test_unsupported_flag -- 
-[Fri Oct  5 11:47:10 EDT 2018] - ############################################
+[Fri Oct  5 11:57:30 EDT 2018] - -- End Error ouput for test_unsupported_flag -- 
+[Fri Oct  5 11:57:30 EDT 2018] - ############################################
