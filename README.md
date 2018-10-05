@@ -1,6 +1,7 @@
 # SE6367-Project_1
 
 Sample Run:
+
 $HOME/Project-1-Chad-Hensley/bin/Hensley-Test-Execution.sh $HOME/Project-1-Chad-Hensley $HOME/Project-1/spell
 
 Working directory is  /home/cxh174630/Project-1-Chad-Hensley
