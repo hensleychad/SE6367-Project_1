@@ -11,7 +11,7 @@ LOG_DIR="${WORKING_DIR}/log"
 OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
 ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
 ERROR_FILE_TMP="${LOG_DIR}/Hensley-Test.Error.tmp"
-TEST_ARRAY=(test_standard test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_print_stems test_empty_file  test_file_not_found test_unsupported_flag)
+TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_sample test_stock_sample test_help test_ispell_version test_spell_version test_other_dictionary test_ispell_program test_all_chains test_print_file_name test_print_numbers_on_lines test_print_words_not_literally_found test_print_stems test_empty_file  test_file_not_found test_unsupported_flag)
 
 ###############  START Pre-Flight checks  ###################3
   check_input_dir_exist() {
@@ -133,18 +133,62 @@ TEST_ARRAY=(test_standard test_help test_ispell_version test_spell_version test_
 ###############  END  Utils  ###################3
 
 ###############  START  Tests  ###################3
-  test_standard() {
+  test_number_sample() {
+    cmd=""  #keep variable clean
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_number_sample --" ${OUTPUT_FILE}
+    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_number_sample --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_number_sample"
+    add_buffer
+ }
+  test_multi_line_space_sample() {
+    cmd=""  #keep variable clean
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_multi_line_space_sample"
+    add_buffer
+  }
+
+  test_column_format_sample() {
+    cmd=""  #keep variable clean
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample 2> ${ERROR_FILE_TMP}"
+    log_it "############################################" ${OUTPUT_FILE}
+    log_it "-- Start test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample 2> ${ERROR_FILE_TMP}`
+    log_it "Output:\n$cmd" ${OUTPUT_FILE}
+    log_it "-- End test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "############################################" ${OUTPUT_FILE}
+    merge_error_file "test_multi_line_space_sample"
+    add_buffer
+  }
+
+  test_stock_sample() {
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_standard --" ${OUTPUT_FILE}
+    log_it "-- Start test_stock_sample --" ${OUTPUT_FILE}
     log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_standard --" ${OUTPUT_FILE}
+    log_it "-- End test_stock_sample --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_standard"
+    merge_error_file "test_stock_sample"
     add_buffer
   }
 
