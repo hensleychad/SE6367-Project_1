@@ -142,28 +142,26 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_number_sample --" ${OUTPUT_FILE}
-    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "-- Start T001 test_number_sample --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_number_sample --" ${OUTPUT_FILE}
+    log_it "-- End T001 test_number_sample --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_number_sample"
+    merge_error_file "T001 test_number_sample"
     add_buffer
  }
   test_multi_line_space_sample() {
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_multi_line_space_sample --" ${OUTPUT_FILE}
-    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "-- Start T002 test_multi_line_space_sample --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "-- End T002 test_multi_line_space_sample --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_multi_line_space_sample"
+    merge_error_file "T002 test_multi_line_space_sample"
     add_buffer
   }
 
@@ -171,14 +169,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_multi_line_space_sample --" ${OUTPUT_FILE}
-    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "-- Start T003 test_column_format_sample --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_multi_line_space_sample --" ${OUTPUT_FILE}
+    log_it "-- End T003 test_column_format_sample --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_multi_line_space_sample"
+    merge_error_file "T003 test_column_format_sample"
     add_buffer
   }
 
@@ -186,14 +183,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_stock_sample --" ${OUTPUT_FILE}
-    log_it "Clean test - Test sample file against spell" ${OUTPUT_FILE}
+    log_it "-- Start T004 test_stock_sample --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_stock_sample --" ${OUTPUT_FILE}
+    log_it "-- End T004 test_stock_sample --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_stock_sample"
+    merge_error_file "T004 test_stock_sample"
     add_buffer
   }
 
@@ -201,14 +197,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} --help 2>> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_help --" ${OUTPUT_FILE}
+    log_it "-- Start T005 test_help --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} --help 2>${ERROR_FILE_TMP}`
     log_it "NOTE: test_help echos the the usage of spell STDOUT then writes the help menu to STDERR. See ${ERROR_FILE} for test_help output" ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_help --" ${OUTPUT_FILE}
+    log_it "-- End T005 test_help --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_help"
+    merge_error_file "T005 test_help"
     add_buffer
   }
 
@@ -216,13 +212,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} -I 2>> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_ispell_version --" ${OUTPUT_FILE}
+    log_it "-- Start T006 test_ispell_version --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} -I 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_ispell_version --" ${OUTPUT_FILE}
+    log_it "-- End T006 test_ispell_version --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_ispell_version"
+    merge_error_file "T006 test_ispell_version"
     add_buffer
   }
 
@@ -230,14 +226,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} --version 2>>${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_spell_version  --" ${OUTPUT_FILE}
+    log_it "-- Start T007 test_spell_version  --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     log_it "NOTE: test_spell_version output will be empty. See ${ERROR_FILE} for test_spell_version output" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} --version 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_spell_version --" ${OUTPUT_FILE}
+    log_it "-- End T007 test_spell_version --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_spell_version"
+    merge_error_file "T007 test_spell_version"
     add_buffer
   }
 
@@ -245,14 +241,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_other_dictionary --" ${OUTPUT_FILE}
+    log_it "-- Start T008 test_other_dictionary --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     log_it "NOTE: test_other_dictionary output will show usage  See ${ERROR_FILE} for test_other_dictionary output" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_other_dictionary --" ${OUTPUT_FILE}
+    log_it "-- End T008 test_other_dictionary --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_other_dictionary"
+    merge_error_file "T008 test_other_dictionary"
     add_buffer
   }
 
@@ -260,14 +256,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_ispell_program --" ${OUTPUT_FILE}
+    log_it "-- Start T009 test_ispell_program --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     log_it "NOTE: test_ispell_program will error since ispell may not be installed  See ${ERROR_FILE} for test_ispell_program output" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End  test_ispell_program --" ${OUTPUT_FILE}
+    log_it "-- End  T009 test_ispell_program --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_ispell_program"
+    merge_error_file "T009 test_ispell_program"
     add_buffer
   }
 
@@ -275,13 +271,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers -l 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_all_chains  --" ${OUTPUT_FILE}
+    log_it "-- Start T010 test_all_chains  --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers -l 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End  test_all_chains --" ${OUTPUT_FILE}
+    log_it "-- End  T010 test_all_chains --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_all_chains"
+    merge_error_file "T010 test_all_chains"
     add_buffer
   }
 
@@ -289,13 +285,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft --print-file-name 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_print_file_name --" ${OUTPUT_FILE}
+    log_it "-- Start T011 test_print_file_name --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft --print-file-name 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_print_file_name --" ${OUTPUT_FILE}
+    log_it "-- End T011 test_print_file_name --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_print_file_name"
+    merge_error_file "T011 test_print_file_name"
     add_buffer
   }
 
@@ -303,13 +299,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_ft --number 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_print_numbers_on_lines --" ${OUTPUT_FILE}
+    log_it "-- Start T012 test_print_numbers_on_lines --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_ft --number 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_print_numbers_on_lines --" ${OUTPUT_FILE}
+    log_it "-- End T012 test_print_numbers_on_lines --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_print_numbers_on_lines"
+    merge_error_file "T012 test_print_numbers_on_lines"
     add_buffer
   }
 
@@ -317,13 +313,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_print_stems --" ${OUTPUT_FILE}
+    log_it "-- Start T013 test_print_stems --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/iso_sample --print-stems 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_print_stems --" ${OUTPUT_FILE}
+    log_it "-- End T013 test_print_stems --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_print_stems"
+    merge_error_file "T013 test_print_stems"
     add_buffer
   }
 
@@ -331,13 +327,13 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_print_words_not_literally_found --" ${OUTPUT_FILE}
+    log_it "-- Start T014 test_print_words_not_literally_found --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_numbers -v 2> ${ERROR_FILE_TMP}`
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_print_words_not_literally_found --" ${OUTPUT_FILE}
+    log_it "-- End T014 test_print_words_not_literally_found --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_print_words_not_literally_found"
+    merge_error_file "T014 test_print_words_not_literally_found"
     add_buffer
   }
 
@@ -345,14 +341,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "-- Start T015 test_unsupported_flag --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_unsupported_flag output will show usage  See ${ERROR_FILE} for test_unsupported_flag output" ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_unsupported_flag --" ${OUTPUT_FILE}
+    log_it "-- End T015 test_unsupported_flag --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_unsupported_flag"
+    merge_error_file "T015 test_unsupported_flag"
     add_buffer
   }
 
@@ -360,14 +356,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_file_not_found --" ${OUTPUT_FILE}
+    log_it "-- Start T016 test_file_not_found --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_file_not_found output will show nothing.  See ${ERROR_FILE} for test_file_not_found output" ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_file_not_found --" ${OUTPUT_FILE}
+    log_it "-- End T016 test_file_not_found --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_file_not_found"
+    merge_error_file "T016 test_file_not_found"
     add_buffer
   }
 
@@ -375,14 +371,14 @@ TEST_ARRAY=(test_number_sample test_multi_line_space_sample test_column_format_s
     cmd=""  #keep variable clean
     cmd_string="${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}"
     log_it "############################################" ${OUTPUT_FILE}
-    log_it "-- Start test_empty_file --" ${OUTPUT_FILE}
+    log_it "-- Start T017 test_empty_file --" ${OUTPUT_FILE}
     log_it "Exeucting the following command: \n${cmd_string}" ${OUTPUT_FILE}
     cmd=`${SPELL_CMD} ${INPUT_DIR}/empty_sample 2> ${ERROR_FILE_TMP}`
     log_it "NOTE: test_empty_file test output will show nothing." ${OUTPUT_FILE}
     log_it "Output:\n$cmd" ${OUTPUT_FILE}
-    log_it "-- End test_empty_file --" ${OUTPUT_FILE}
+    log_it "-- End T017 test_empty_file --" ${OUTPUT_FILE}
     log_it "############################################" ${OUTPUT_FILE}
-    merge_error_file "test_empty_file"
+    merge_error_file "T017 test_empty_file"
     add_buffer
   }
 
