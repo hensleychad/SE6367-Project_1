@@ -7,183 +7,214 @@ SPELL_CMD=$2
 INPUT_DIR="${WORKING_DIR}/input"
 DICT_DIR="${WORKING_DIR}/dictionary"
 
-### Not sure this will be used
 LOG_DIR="${WORKING_DIR}/log"
 OUTPUT_FILE="${LOG_DIR}/Hensley-Test.Output"
 ERROR_FILE="${LOG_DIR}/Hensley-Test.Error"
-TEST_ARRAY=(standard_test help_test ispell_version)
+TEST_ARRAY=(standard_test help_test ispell_version spell_version other_dictionary ispell_program all_chains print_file_name print_numbers_on_lines print_words_not_literally_found print_stems test_empty_file  test_upsupported_flag)
+ERROR_MSG="Check Error Log, ${ERROR_FILE}"
 
-  logit() 
-  {
-    echo "[`date`] - ${*}" >> ${OUTPUT_FILE}
-    #echo "[${USER}][`date`] - ${*}" >> ${OUTPUT_FILE}
+
+  log_it() {
+    echo -e "[`date`] - ${*}" >> ${OUTPUT_FILE}
   }
 
+  clean_logs() {
+   if [ -f $OUTPUT_FILE ]; then
+     echo "Cleaning up log file ${OUTPUT_FILE}"
+     rm ${OUTPUT_FILE}
+   fi
+  }
+
+  clean_error_logs() {
+   if [ -f $ERROR_FILE ]; then
+     echo "Cleaning up error file ${ERROR_FILE}"
+     rm ${ERROR_FILE}
+   fi
+  }
+
+
   add_buffer() {
-    echo "" >> ${OUTPUT_FILE}
-    echo "" >> ${OUTPUT_FILE}
-    echo "" >> ${OUTPUT_FILE}
-    echo "" >> ${OUTPUT_FILE}
+    echo -e "[`date`] \n++\n++\n++\n++" >> ${OUTPUT_FILE}
   }
 
 
   standard_test() {
-    logit "############################################"
-    logit "###### Start input file testing #####"
-
-    logit "############################################"
-    logit "Clean test - Test sample file against spell"
-    logit "############################################"
-    logit "Executing ${SPELL_CMD} ${INPUT_DIR}/sample"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample`
-    logit "$cmd"
-    logit "###### End input file testing #####"
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start input file testing #####"
+    log_it "############################################"
+    log_it "Clean test - Test sample file against spell"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample 2> ${ERROR_FILE}`
+    log_it "Output:\n$cmd"
+    log_it "-- End input file testing #####"
+    log_it "############################################"
     add_buffer
   }
 
   help_test() {
-    logit "############################################"
-    logit "###### Start Show help test case #####"
-    logit "############################################"
-    logit "Help test - Show help"
-    logit "   -h, --help                          Print a summary of the options."
-    logit "############################################"
-    cmd=`${SPELL_CMD} --help`
-    logit "$cmd"
-    logit "###### End Show help test case #####"
+    cmd_string="${SPELL_CMD} --help 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start Show help test case #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${SPELL_CMD} --help 2> ${ERROR_FILE}`
+    log_it "Output:\n$cmd"
+    log_it "-- End Show help test case #####"
+    log_it "############################################"
+    add_buffer
   }
 
   ispell_version() {
-    logit "############################################"
-    logit "###### Start print ispell version #####"
-    logit "############################################"
-    logit "   -I, --ispell-version                        Print Ispell's version."
-    logit "############################################"
-    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -I`
-    logit "$cmd"
-    logit "###### End print ispell version #####"
+    cmd_string="${SPELL_CMD} -I 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print ispell version #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${SPELL_CMD} -I 2> ${ERROR_FILE}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print ispell version #####"
+    log_it "############################################"
+    add_buffer
   }
 
-  for test_method in "${TEST_ARRAY[@]}"
-  do
-    echo "${test_method}"
-    ${test_method}
-  done
+  spell_version () {
+    cmd_string="${SPELL_CMD} --version 2>${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print version number  #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print version number #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-exit 0
+  other_dictionary() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start  use other file to look up words #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End  use other file to look up words #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-  logit "###### Start print version number  #####"
-  logit "############################################"
-  logit "   -V, --version                               Print the version number."
-  logit "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample --version
-  logit "###### End print version number #####"
-  logit "\n\n\n\n"
+  ispell_program() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --ispell 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start  Calls PROGRAM as Ispell #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End  Calls PROGRAM as Ispell #####"
+    log_it "############################################"
+    add_buffer
+  }
 
+  all_chains() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -l 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start caompatibility  #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End  caompatibility #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -b, --british                               Use the British dictionary."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -b
-${SPELL_CMD} ${INPUT_DIR}/sample --british
-echo "###### End  #####"
-echo ""
-echo ""
-echo ""
-echo ""
+  print_file_name() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print-file-name #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print-file-name #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -d, --dictionary=FILE                       Use FILE to look up words."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample --dictionary=${DICT_DIR}/british-english
-echo "###### End  #####"
+  print_numbers_on_lines() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample --number 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print numbers before lines #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print numbers before lines #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -i, --ispell=PROGRAM                        Calls PROGRAM as Ispell."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -i
-${SPELL_CMD} ${INPUT_DIR}/sample --ispell
-echo "###### End  #####"
+  print_stems() {
+    cmd_tring="${SPELL_CMD} ${INPUT_DIR}/sample --print-stems 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print-stems #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print-stems #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -l, --all-chains                    Ignored; for compatibility."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -l
-${SPELL_CMD} ${INPUT_DIR}/sample --all-chains
-echo "###### End  #####"
+  print_words_not_literally_found() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -v 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start print words not literally found #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${cmd_string}`
+    log_it "Output:\n$cmd"
+    log_it "-- End print words not literally found #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -n, --number                                Print line numbers before lines."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -n
-${SPELL_CMD} ${INPUT_DIR}/sample --number
-echo "###### End  #####"
+  test_upsupported_flag() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "-- Start test of unsupported flag #####"
+    log_it "############################################"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample -q 2> ${ERROR_FILE}`
+    log_it "Output:\n$cmd"
+    log_it "-- End test of unsupported flag #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -o, --print-file-name                       Print file names before lines."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -o
-${SPELL_CMD} ${INPUT_DIR}/sample --print-file-name
-echo "###### End  #####"
+  test_empty_file() {
+    cmd_string="${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE}"
+    cmd="${ERROR_MSG}"
+    log_it "############################################"
+    log_it "-- Start does not exist #####"
+    log_it "Exeucting the following command: ${cmd_string}"
+    cmd=`${SPELL_CMD} ${INPUT_DIR}/sample_none 2> ${ERROR_FILE}`
+    log_it "Output:\n$cmd"
+    log_it "-- End does not exist #####"
+    log_it "############################################"
+    add_buffer
+  }
 
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -D, --ispell-dictionary=DICTIONARY  Use DICTIONARY to look up words."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -D
-${SPELL_CMD} ${INPUT_DIR}/sample --ispell-dictionary
-echo "###### End  #####"
-
-"###### Start  #####"
-echo "############################################"
-echo "#   -s, --stop-list=FILE                        Ignored; for compatibility."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -s
-${SPELL_CMD} ${INPUT_DIR}/sample --stop-list
-echo "###### End  #####"
-
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -v, --verbose                               Print words not literally found."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -v
-${SPELL_CMD} ${INPUT_DIR}/sample --verbose
-echo "###### End  #####"
-
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -x, --print-stems                   Ignored; for compatibility."
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -x
-${SPELL_CMD} ${INPUT_DIR}/sample --print-stems
-echo "###### End  #####"
-
-echo "###### Start  #####"
-echo "############################################"
-echo "#   -q 	unsupported flag"
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample -q
-echo "###### End  #####"
-
-echo "###### Start  #####"
-echo "############################################"
-echo "Destructive test - File empty"
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/empty_sample
-
-echo "############################################"
-echo "Destructive test - File does not exist"
-echo "############################################"
-${SPELL_CMD} ${INPUT_DIR}/sample_none
-echo "###### End  #####"
-}
-
+  run_tests() {
+    for test_method in "${TEST_ARRAY[@]}"
+    do
+      log_it "Running ${test_method}"
+      ${test_method}
+    done
+  }
 
 if [ $# -eq 0 ]
   then
@@ -192,4 +223,6 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-runTests
+  clean_logs
+  clean_error_logs
+  run_tests

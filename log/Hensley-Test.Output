@@ -1,10 +1,10 @@
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - ###### Start input file testing #####
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - Clean test - Test sample file against spell
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - Executing /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample
-[Thu Oct  4 16:53:54 EDT 2018] - Tihs
+[Fri Oct  5 00:27:07 EDT 2018] - Running standard_test
+[Fri Oct  5 00:27:07 EDT 2018] - -- Start input file testing #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] - Clean test - Test sample file against spell
+[Fri Oct  5 00:27:07 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:07 EDT 2018] - Output:
+Tihs
 si
 fo
 Splel
@@ -17,23 +17,238 @@ fiel
 Foo
 bza
 baz
-[Thu Oct  4 16:53:54 EDT 2018] - ###### End input file testing #####
+[Fri Oct  5 00:27:07 EDT 2018] - -- End input file testing #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:07 EDT 2018] - Running help_test
+[Fri Oct  5 00:27:07 EDT 2018] - -- Start Show help test case #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] - Exeucting the following command: /usr/bin/spell --help 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:07 EDT 2018] - Output:
+Usage: /usr/bin/spell [OPTION]... [FILE]...
+[Fri Oct  5 00:27:07 EDT 2018] - -- End Show help test case #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:07 EDT 2018] - Running ispell_version
+[Fri Oct  5 00:27:07 EDT 2018] - -- Start print ispell version #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] - Exeucting the following command: /usr/bin/spell -I 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:07 EDT 2018] - Output:
+/usr/bin/spell: Ispell version 3.3.02
+[Fri Oct  5 00:27:07 EDT 2018] - -- End print ispell version #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:07 EDT 2018] - Running spell_version
+[Fri Oct  5 00:27:07 EDT 2018] - -- Start print version number  #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] - Exeucting the following command: /usr/bin/spell --version 2>/home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:07 EDT 2018] - Output:
 
+[Fri Oct  5 00:27:07 EDT 2018] - -- End print version number #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:07 EDT 2018] - Running other_dictionary
+[Fri Oct  5 00:27:07 EDT 2018] - -- Start  use other file to look up words #####
+[Fri Oct  5 00:27:07 EDT 2018] - ############################################
+[Fri Oct  5 00:27:07 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample --dictionary=/home/vagrant/SE6367-Project_1/dictionary/british-english 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+Tihs
+si
+fo
+Splel
+worsd
+spellledworng
+fi
+cna
+dael
+fiel
+Foo
+bza
+baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End  use other file to look up words #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running ispell_program
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start  Calls PROGRAM as Ispell #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample --ispell 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
 
+[Fri Oct  5 00:27:09 EDT 2018] - -- End  Calls PROGRAM as Ispell #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running all_chains
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start caompatibility  #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample -l 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+Tihs
+si
+fo
+Splel
+worsd
+spellledworng
+fi
+cna
+dael
+fiel
+Foo
+bza
+baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End  caompatibility #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running print_file_name
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start print-file-name #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample --print-file-name 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+/home/vagrant/SE6367-Project_1/input/sample: Tihs
+/home/vagrant/SE6367-Project_1/input/sample: si
+/home/vagrant/SE6367-Project_1/input/sample: fo
+/home/vagrant/SE6367-Project_1/input/sample: Splel
+/home/vagrant/SE6367-Project_1/input/sample: worsd
+/home/vagrant/SE6367-Project_1/input/sample: spellledworng
+/home/vagrant/SE6367-Project_1/input/sample: fi
+/home/vagrant/SE6367-Project_1/input/sample: cna
+/home/vagrant/SE6367-Project_1/input/sample: dael
+/home/vagrant/SE6367-Project_1/input/sample: fiel
+/home/vagrant/SE6367-Project_1/input/sample: Foo
+/home/vagrant/SE6367-Project_1/input/sample: bza
+/home/vagrant/SE6367-Project_1/input/sample: baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End print-file-name #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running print_numbers_on_lines
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start print numbers before lines #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample --number 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+1: Tihs
+1: si
+1: fo
+1: Splel
+1: worsd
+1: spellledworng
+2: fi
+2: cna
+2: dael
+2: fiel
+2: Foo
+2: bza
+2: baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End print numbers before lines #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running print_words_not_literally_found
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start print words not literally found #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample -v 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+Tihs
+si
+fo
+Splel
+worsd
+spellledworng
+fi
+cna
+dael
+fiel
+Foo
+bza
+baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End print words not literally found #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running print_stems
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start print-stems #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample -v 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+Tihs
+si
+fo
+Splel
+worsd
+spellledworng
+fi
+cna
+dael
+fiel
+Foo
+bza
+baz
+[Fri Oct  5 00:27:09 EDT 2018] - -- End print-stems #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running test_empty_file
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start does not exist #####
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample_none 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
 
-
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - ###### Start Show help test case #####
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - Help test - Show help
-[Thu Oct  4 16:53:54 EDT 2018] -    -h, --help                          Print a summary of the options.
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - Usage: /usr/bin/spell [OPTION]... [FILE]...
-[Thu Oct  4 16:53:54 EDT 2018] - ###### End Show help test case #####
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - ###### Start print ispell version #####
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] -    -I, --ispell-version                        Print Ispell's version.
-[Thu Oct  4 16:53:54 EDT 2018] - ############################################
-[Thu Oct  4 16:53:54 EDT 2018] - /usr/bin/spell: Ispell version 3.3.02
-[Thu Oct  4 16:53:54 EDT 2018] - ###### End print ispell version #####
+[Fri Oct  5 00:27:09 EDT 2018] - -- End does not exist #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
+[Fri Oct  5 00:27:09 EDT 2018] - Running test_upsupported_flag
+[Fri Oct  5 00:27:09 EDT 2018] - -- Start test of unsupported flag #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] - Exeucting the following command: /usr/bin/spell /home/vagrant/SE6367-Project_1/input/sample -q 2> /home/vagrant/SE6367-Project_1/log/Hensley-Test.Error
+[Fri Oct  5 00:27:09 EDT 2018] - Output:
+Try `/usr/bin/spell --help' for more information.
+[Fri Oct  5 00:27:09 EDT 2018] - -- End test of unsupported flag #####
+[Fri Oct  5 00:27:09 EDT 2018] - ############################################
+[Fri Oct  5 00:27:09 EDT 2018] 
+++
+++
+++
+++
