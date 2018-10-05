@@ -24,7 +24,9 @@ Results can be found in /home/cxh174630/Project-1-Chad-Hensley/log/Hensley-Test.
 Errors can be found in /home/cxh174630/Project-1-Chad-Hensley/log/Hensley-Test.Error
 
 *** Error in `/home/cxh174630/Project-1/spell': invalid fastbin entry (free): 0x0000000002197ba0 ***
+
 *** Error in `/home/cxh174630/Project-1/spell': invalid fastbin entry (free): 0x0000000001db8bf0 ***
+
 *** Error in `/home/cxh174630/Project-1/spell': invalid fastbin entry (free): 0x000000000222cba0 ***
 
 Cleaning up error file /home/cxh174630/Project-1-Chad-Hensley/log/Hensley-Test.Error.tmp
